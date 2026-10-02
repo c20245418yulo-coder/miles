@@ -5,63 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
 </head>
 
-<body>
-   
-     <h1 class="text-3xl font-bold underline text-red-700">
-    Miles G. Yulo
+<body class="text-center bg-pink-200">
+
+    <h1 class="text-3xl font-bold underline text-red-700">
+        Miles G. Yulo
     </h1>
 
-    <button id="switch">Switch</button>
+    <button id="switch"
+        class="bg-black text-white px-6 py-3 rounded-[10px] transition-colors duration-1000 hover:bg-pink-400 hover:text-black">
+        Switch
+    </button>
+
     <header>
-        <nav>
-            <span>miles@gmail.com</span>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+        <nav class="flex justify-between items-center mx-[50px] max-sm:flex-col max-sm:gap-4">
+
+            <span class="text-red-700">
+                c20245418.yulo@csav.edu.ph
+            </span>
+
+            <ul class="flex gap-5 p-0 m-0 list-none max-sm:flex-col max-sm:text-center">
+                <li><a class="text-red-700 transition-colors duration-500 hover:text-pink-400" href="#projects">
+                        Projects </a> </li>
+                <li><a class="text-red-700 transition-colors duration-500 hover:text-pink-400" href="#services">
+                        Services</a></li>
+                <li><a class="text-red-700 transition-colors duration-500 hover:text-pink-400"
+                        href="#contact">ContactMe</a></li>
             </ul>
         </nav>
     </header>
+    <section id="projects"
+        class="flex-1 min-w-[280px] border-2 border-[#8B1E5D] p-5 rounded-[15px] shadow-lg transition-all duration-500  hover:shadow-2xl max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
 
-    <main>
-        <section id="projects"> 
-            <h2 class="projects">My Projects</h2>
-            <p>Personal portfolio, payroll system, company website, startup website, and compliance monitoring system.
-            </p>
-        </section>
+        <h2 class="text-[#8B1E5D] font-bold text-2xl">
+            My Projects
+        </h2>
 
-        <section id="services">
-            <h2 class="services">My Services</h2>
-            <p>Website Creation, System Creation, AI Automation, Database Management, Project Management, Systems
-                Analyst</p>
-        </section>
+        <p class="mt-4 text-gray-800">
+            Personal portfolio, payroll system, company website,
+            startup website, and compliance monitoring system.
+        </p>
+    </section>
+    <section id="services"
+        class="flex-1 min-w-[280px] border-2 border-red-700 p-5 rounded-[15px] shadow-lg transition-all duration-500 hover:shadow-2xl max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
 
-        <section id="contact">
-            <h2 class="contact">Let's build together!</h2>
-            <form action="#">
-                <!-- Name -->
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+        <h2 class="text-[#8B1E5D] font-bold text-2xl">
+            My Services
+        </h2>
+        <p class="mt-4 text-gray-800">
+            Website Creation, System Creation, AI Automation,
+            Database Management, Project Management, Systems Analyst
+        </p>
+    </section>
+    <section id="contact"
+        class="flex-1 min-w-[280px] border-2 border-pink-700 p-5 rounded-[15px] shadow-lg transition-all duration-500  hover:shadow-2xl max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
 
-                <!-- Email -->
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+        <h2 class="text-[#8B1E5D] font-bold text-2xl">
+            Let's build together!
+        </h2>
 
-                <!-- Message -->
-                <label for="message">Message</label>
-                <textarea name="message" id="message" rows="5" required></textarea>
+        <form action="#" class="flex flex-col gap-5 mt-4">
 
-                <!-- Submit -->
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+            <label for="name">
+                Name
+            </label>
+
+            <input class="border-2 border-pink-300 rounded-[8px] p-2 focus:border-pink-600 outline-none" type="text"
+                id="name" name="name" required>
+
+
+            <label for="email">
+                Email
+            </label>
+
+            <input class="border-2 border-pink-300 rounded-[8px] p-2 focus:border-pink-600 outline-none" type="email"
+                name="email" id="email" required>
+
+
+            <label for="message">
+                Message
+            </label>
+
+            <textarea class="border-2 border-pink-300 rounded-[8px] p-2 focus:border-pink-600 outline-none"
+                name="message" id="message" rows="5" required></textarea>
+
+
+            <button type="submit"
+                class="bg-black text-white px-6 py-3 rounded-[10px] transition-colors duration-1000 hover:bg-pink-400 hover:text-black">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
     </main>
+    <footer class="bg-pink-300 p-5 mt-10">
 
-    <!-- <script src="script.js"></script> -->
+        <p class="text-purple font-bold">
+            Miles G. Yulo
+        </p>
+        <p class="text-red-700">
+            c20245418.yulo@csav.edu.ph
+        </p>
+
+    </footer>
+    <script>
+    </script>
+    <!-- <script src="script.js">
 </body>
 
 </html>
