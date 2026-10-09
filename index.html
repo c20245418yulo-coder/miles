@@ -1,70 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- Dark mode variant from your teacher -->
+    <style type="text/tailwindcss">
+        @custom-variant dark (&:where(.dark, .dark *));
+    </style>
 
 </head>
 
-<body class="text-center bg-pink-200">
+<body class="text-center dark:bg-slate-900 bg-white-text-slate-900 dark:text-white"></body> 
 
-    <h1 class="text-3xl font-bold underline text-red-700">
+    <h1 class="text-3xl font-bold underline text-red-700 dark:text-white">
         Miles G. Yulo
     </h1>
 
-    <button id="switch"
-        class="bg-black text-white px-6 py-3 rounded-[10px] transition-colors duration-1000 hover:bg-pink-400 hover:text-black">
-        Switch
+    <!-- Toggle Dark Button -->
+    <button id="toggledark"
+        class="bg-black text-white px-6 py-3 rounded-[10px] transition-colors text-black dark:bg-white dark:text-slate-900">
+        Toggle Dark
     </button>
 
     <header>
         <nav class="flex justify-between items-center mx-[50px] max-sm:flex-col max-sm:gap-4">
 
-            <span class="text-red-700">
+            <span class="text-red-700 dark:text-white">
                 c20245418.yulo@csav.edu.ph
             </span>
 
             <ul class="flex gap-5 p-0 m-0 list-none max-sm:flex-col max-sm:text-center">
-                <li><a class="text-red-700 transition-colors duration-500 hover:text-pink-400" href="#projects">
-                        Projects </a> </li>
-                <li><a class="text-red-700 transition-colors duration-500 hover:text-pink-400" href="#services">
-                        Services</a></li>
-                <li><a class="text-red-700 transition-colors duration-500 hover:text-pink-400"
-                        href="#contact">ContactMe</a></li>
+
+                <li>
+                    <a class="text-red-700 transition-colors duration-500 hover:text-pink-400 dark:text-white"
+                        href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a class="text-red-700 transition-colors duration-500 hover:text-pink-400 dark:text-white"
+                        href="#services">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a class="text-red-700 transition-colors duration-500 hover:text-pink-400 dark:text-white"
+                        href="#contact">
+                        ContactMe
+                    </a>
+                </li>
+
             </ul>
         </nav>
     </header>
-    <section id="projects"
-        class="flex-1 min-w-[280px] border-2 border-[#8B1E5D] p-5 rounded-[15px] shadow-lg transition-all duration-500  hover:shadow-2xl max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
 
-        <h2 class="text-[#8B1E5D] font-bold text-2xl">
+    <!-- Projects -->
+    <section id="projects"
+        class="flex-1 min-w-[280px] border-2 border-[#8B1E5D] border-gray-300 dark:border-slate-800 dark:bg-slate-900 p-5 rounded-[15px]
+
+        <h2 class="text-[#8B1E5D] font-bold text-2xl dark:text-white">
             My Projects
         </h2>
 
-        <p class="mt-4 text-gray-800">
+        <p class="mt-4 text-gray-800 dark:text-white">
             Personal portfolio, payroll system, company website,
             startup website, and compliance monitoring system.
         </p>
     </section>
-    <section id="services"
-        class="flex-1 min-w-[280px] border-2 border-red-700 p-5 rounded-[15px] shadow-lg transition-all duration-500 hover:shadow-2xl max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
 
-        <h2 class="text-[#8B1E5D] font-bold text-2xl">
+    <!-- Services -->
+    <section id="services"
+        class="flex-1 min-w-[280px] border-2 border-red-700 border-gray-300 dark:border-slate-800 dark:bg-slate-900 p-5 rounded-[15px]
+
+        <h2 class="text-[#8B1E5D] font-bold text-2xl dark:text-white">
             My Services
         </h2>
-        <p class="mt-4 text-gray-800">
+
+        <p class="mt-4 text-gray-800 dark:text-white">
             Website Creation, System Creation, AI Automation,
             Database Management, Project Management, Systems Analyst
         </p>
     </section>
-    <section id="contact"
-        class="flex-1 min-w-[280px] border-2 border-pink-700 p-5 rounded-[15px] shadow-lg transition-all duration-500  hover:shadow-2xl max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
 
-        <h2 class="text-[#8B1E5D] font-bold text-2xl">
+    <!-- Contact -->
+    <section id="contact"
+        class="flex-1 min-w-[280px] border-2 border-pink-700 border-gray-300 dark:border-slate-800 dark:bg-slate-900 p-5 rounded-[15px] shadow-lg transition-all hover:shadow-2xl max-sm:flex-[1_1_100%] max-sm:min-w-0 max-sm:p-4">
+
+        <h2 class="text-[#8B1E5D] font-bold text-2xl dark:text-white">
             Let's build together!
         </h2>
 
@@ -73,16 +102,14 @@
             <label for="name">
                 Name
             </label>
-
-            <input class="border-2 border-pink-300 rounded-[8px] p-2 focus:border-pink-600 outline-none" type="text"
+             <input class="border-2 border-grey-300 rounded-[8px] p-2 focus:border-pink-600 outline-none" type="text"
                 id="name" name="name" required>
 
-
-            <label for="email">
+              <label for="email">
                 Email
             </label>
 
-            <input class="border-2 border-pink-300 rounded-[8px] p-2 focus:border-pink-600 outline-none" type="email"
+            <input class="border-2 border-grey-300 rounded-[8px] p-2 focus:border-pink-600 outline-none" type="email"
                 name="email" id="email" required>
 
 
@@ -90,33 +117,48 @@
                 Message
             </label>
 
-            <textarea class="border-2 border-pink-300 rounded-[8px] p-2 focus:border-pink-600 outline-none"
+            <textarea class="border-2 border-grey-300 rounded-[8px] p-2 focus:border-pink-600 outline-none"
                 name="message" id="message" rows="5" required></textarea>
 
 
+
+
+            <input
+                class="border-2 border-grey-300 rounded-[8px] p-2 focus:border-pink-600 outline-none"
+
             <button type="submit"
-                class="bg-black text-white px-6 py-3 rounded-[10px] transition-colors duration-1000 hover:bg-pink-400 hover:text-black">
+                class="bg-black text-white px-6 py-3 rounded-[10px] transition-colors hover:bg-pink-400 hover:text-black">
                 Send Message
             </button>
 
         </form>
 
+
+        </form>
     </section>
 
-    </main>
-    <footer class="bg-pink-300 p-5 mt-10">
+    <!-- Footer -->
+    <footer class="text-center dark:bg-slate-900 bg-white-text-slate-900 dark:text-white"></footer>
 
-        <p class="text-purple font-bold">
+        <p class="text-slate-900 font-bold dark:text-white">
             Miles G. Yulo
         </p>
-        <p class="text-red-700">
+
+        <p class="text-center dark:bg-slate-900 bg-white-text-slate-900 dark:text-white">
             c20245418.yulo@csav.edu.ph
         </p>
 
     </footer>
+
+    <!-- Toggle Dark JavaScript -->
     <script>
+        const tb = document.querySelector("#toggledark");
+        const html = document.querySelector("html");
+        tb.addEventListener("click", function () {
+        html.classList.toggle("dark");
+        });
     </script>
-    <!-- <script src="script.js">
+
 </body>
 
 </html>
